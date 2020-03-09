@@ -13,6 +13,9 @@ public class ArrayUtility<SomeType> {
     }
 
     public SomeType findOddOccurringValue() {
+        for (SomeType elem: array) {
+
+        }
         return null;
     }
 
