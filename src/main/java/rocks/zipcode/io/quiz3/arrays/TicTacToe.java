@@ -39,9 +39,6 @@ public class TicTacToe {
     }
 
     public String getWinner() {
-//        String X = "X";
-//        String O = "O";
-//        if(isRowHomogenous(0))
         return null;
     }
 

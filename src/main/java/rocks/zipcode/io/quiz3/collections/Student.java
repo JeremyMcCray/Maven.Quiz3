@@ -1,5 +1,6 @@
 package rocks.zipcode.io.quiz3.collections;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -7,7 +8,7 @@ import java.util.List;
  */
 public class Student {
 Lab labName;
-List<Lab> labList;
+List<Lab>labList = new ArrayList<>();
 
     public Student() {
         this(null);
@@ -15,7 +16,7 @@ List<Lab> labList;
 
     public Student(List<Lab> labs) {
 
-        this.labList = labs;
+        labList.addAll(labs);
     }
 
     public Lab getLab(String labName) {
@@ -23,16 +24,18 @@ List<Lab> labList;
             if(labName.equals(element.labName)){
                 return element;
 
-            }        }
+            }
+        }
         return null;
     }
 
     public void setLabStatus(String labName, LabStatus labStatus) {
-        
+
     }
 
     public void forkLab(Lab lab) {
-    labList.add(lab);
+        this.labList.add(lab);
+    lab.setStatus(LabStatus.PENDING);
     }
 
     public LabStatus getLabStatus(String labName) {
