@@ -12,20 +12,33 @@ public class ArrayUtility<SomeType> {
         this.array = array;
     }
 
+
+
     public SomeType findOddOccurringValue() {
+
         for (SomeType elem: array) {
 
         }
         return null;
     }
 
+
     public SomeType findEvenOccurringValue() {
+
         return null;
     }
 
+
     public Integer getNumberOfOccurrences(SomeType valueToEvaluate) {
-        return null;
+        int counter = 0;
+        for (SomeType element: array) {
+            if(element.equals(valueToEvaluate)){
+                counter++;
+            }
+        }
+        return counter;
     }
+
 
     public SomeType[] filter(Function<SomeType, Boolean> predicate) {
         return null;
